@@ -1,0 +1,195 @@
+/**********************************************************************/
+/**********************************************************************/
+.formarea__input {
+	display: flex;
+	margin-bottom: 15px;
+}
+.formarea__input.hidden {
+	display: none;
+}
+.formarea__input label {
+	width: 120px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 40px;
+}
+.formarea__input span {
+	width: calc(100% - 120px);
+}
+.formarea__input span input, .formarea__input span textarea {
+	width: 100%;
+	height: 40px;
+	margin: 0;
+	padding: 9px 14px;
+	border: 2px solid #86b9df;
+	background-color: #ffffff;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #515357;
+	outline: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	transition: border-color 0.3s;
+}
+.formarea__input span textarea {
+	height: 90px;
+	resize: none;
+}
+.formarea__input span input::placeholder, .formarea__input span textarea::placeholder {
+	color: #8b8d94;
+}
+.formarea__input span input.wpcf7-not-valid, .formarea__input span textarea.wpcf7-not-valid {
+	border-color: #dc3232;
+}
+
+/**********************************************************************/
+.formarea .formarea-btn {
+	display: flex;
+	margin: 0 0 15px 120px;
+}
+.formarea .formarea-btn label {
+	display: block;
+	width: 150px;
+	max-width: 100%;
+	padding: 10px 0;
+	border: none;
+	background-color: #a1a1a1;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 20px;
+	color: #ffffff;
+	text-align: center;
+	outline: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	transition: opacity 0.3s;
+}
+.formarea .formarea-btn label:hover {
+	opacity: 0.7;
+}
+.formarea .formarea-btn label span {
+	display: none;
+}
+.formarea .formarea-btn__name {
+	position: relative;
+	width: calc(100% - 170px);
+	overflow: hidden;
+	margin-left: 20px;
+	font-size: 14px;
+	line-height: 40px;
+	white-space: nowrap;
+}
+.formarea .formarea-btn__name:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 40px;
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+
+/**********************************************************************/
+.formarea__submit {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-left: 120px;
+}
+.formarea__submit input {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 150px;
+	max-width: 100%;
+	margin: 0 0 15px;
+	padding: 10px 0;
+	border: none;
+	background-color: #86b9df;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	outline: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	transition: opacity 0.3s;
+}
+.formarea__submit input:hover {
+	opacity: 0.7;
+}
+.formarea__submit .ajax-loader {
+	display: none;
+}
+.formarea .wpcf7 form.submitting .formarea__submit .ajax-loader {
+	display: block;
+	margin: 0 auto 15px 0;
+}
+
+/**********************************************************************/
+.formarea .wpcf7-not-valid-tip {
+	width: 100%;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/**********************************************************************/
+.formarea .wpcf7 .wpcf7-response-output {
+	margin: 0 0 0 120px;
+	padding: 5px 10px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__input {
+		flex-direction: column;
+	}
+	.formarea__input label {
+		width: 100%;
+		margin-bottom: 5px;
+		line-height: 20px;
+	}
+	.formarea__input span {
+		width: 100%;
+	}
+
+	/******************************************************************/
+	.formarea .formarea-btn {
+		flex-direction: column;
+		margin-left: 0;
+	}
+	.formarea .formarea-btn label {
+		margin-bottom: 5px;
+	}
+	.formarea .formarea-btn__name {
+		width: 100%;
+		margin-left: 0;
+		line-height: 20px;
+	}
+	
+	/******************************************************************/
+	.formarea__submit {
+		margin-left: 0;
+	}
+	.formarea__submit:before {
+		display: none;
+	}
+	
+	/******************************************************************/
+	.formarea .wpcf7 .wpcf7-response-output {
+		margin-left: 0;
+	}
+}

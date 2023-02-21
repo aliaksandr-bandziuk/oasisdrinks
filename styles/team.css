@@ -1,0 +1,190 @@
+/**********************************************************************/
+/**********************************************************************/
+main.team {
+	overflow: hidden;
+}
+main.team ~ footer {
+	margin-top: 0;
+}
+main.team .titlearea {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 270px;
+	padding: 20px 0;
+	margin: 0 0 80px;
+	background-color: #d0e5ef;
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+main.team .titlearea:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 25px;
+	display: block;
+	width: 101px;
+	height: 215px;
+	background: url(/wp-content/themes/factory16/img/l1.png);
+	background-size: contain;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+main.team .titlearea:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 5px;
+	display: block;
+	width: 161px;
+	height: 158px;
+	background: url(/wp-content/themes/factory16/img/r1.png);
+	background-size: contain;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+main.team .titlearea .titlearea__title {
+	z-index: 1000;
+	width: 600px;
+	max-width: calc(100% - 40px);
+	margin: 40px auto 20px;
+	font: normal 700 48px / 48px "DINNextCYR", sans-serif;
+	letter-spacing: -1px;
+	color: #515357;
+	text-align: center;
+}
+main.team .titlearea .titlearea__subtitle {
+	z-index: 1000;
+	width: 600px;
+	max-width: calc(100% - 40px);
+	margin: 0 auto auto;
+}
+main.team .titlearea .titlearea__subtitle p {
+	margin: 0 0 10px;
+	font: normal 400 18px / 24px "Lato", sans-serif;
+	color: #515357;
+	text-align: center;
+}
+
+/**********************************************************************/
+main.team .team__content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+/**********************************************************************/
+main.team .team__persons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 1200px;
+	max-width: calc(100% - 40px);
+    margin: 0 auto 60px;
+}
+main.team .team__persons .person {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: calc(25% - 30px);
+	margin: 0 15px 30px;
+	border: 3px solid #d0e5ef;
+	z-index: 10;
+}
+main.team .team__persons .person img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+main.team .team__persons .person__body {
+	padding: 15px 15px 20px;
+	background-color: #ffffff;
+}
+main.team .team__persons .person__name {
+	margin-bottom: 10px;
+    font: normal 600 20px / 24px "DINNextCYR", sans-serif;
+    color: #63a2c0;
+    text-align: center;
+}
+main.team .team__persons .person__job {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+	color: #3f3f3f;
+    text-align: center;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1200px) {
+	/******************************************************************/
+	/******************************************************************/
+	main.team .team__persons .person {
+		width: calc(33.33333% - 30px);
+	}
+}
+
+@media screen and (max-width: 990px) {
+	/******************************************************************/
+	/******************************************************************/
+	main.team .team__persons .person {
+		width: calc(50% - 30px);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	main.team .titlearea {
+		min-height: 0;
+		padding: 10px 0;
+		margin: 0 0 40px;
+	}
+	main.team .titlearea:before {
+		top: 15px;
+		width: 50px;
+		height: 107px;
+	}
+	main.team .titlearea:after {
+		width: 80px;
+		height: 79px;
+	}
+	main.team .titlearea .titlearea__title {
+		margin: 20px auto 10px;
+		font: normal 700 36px / 36px "DINNextCYR", sans-serif;
+		letter-spacing: -0.5px
+	}
+	main.team .titlearea .titlearea__subtitle {
+		margin: 0 auto 20px;
+	}
+	main.team .titlearea .titlearea__subtitle p {
+		margin: 0;
+		font: normal 400 16px / 22px "Lato", sans-serif;
+	}
+	
+	/******************************************************************/
+	main.team .team__persons .person {
+		width: calc(50% - 20px);
+		margin: 0 10px 20px;
+		border-width: 2px;
+	}
+}
+	
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	main.team .team__persons {
+		margin-bottom: 40px;
+	}
+	main.team .team__persons .person {
+		width: calc(100% - 20px);
+		max-width: 400px;
+	}
+}
